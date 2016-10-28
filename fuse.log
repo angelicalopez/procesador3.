@@ -1,0 +1,41 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/PROCESADOR_isim_beh.exe -prj D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/PROCESADOR_beh.prj work.PROCESADOR 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/Ude.vhd" into library work
+Parsing VHDL file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/Uc.vhd" into library work
+Parsing VHDL file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/sumador.vhd" into library work
+Parsing VHDL file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/Rf.vhd" into library work
+Parsing VHDL file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/Psrmodifier.vhd" into library work
+Parsing VHDL file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/Psr.vhd" into library work
+Parsing VHDL file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/nPC.vhd" into library work
+Parsing VHDL file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/MultiPlexo.vhd" into library work
+Parsing VHDL file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/Im.vhd" into library work
+Parsing VHDL file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/Alu.vhd" into library work
+Parsing VHDL file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/PROCESADOR.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package textio
+Compiling package numeric_std
+Compiling architecture behavioral of entity sumador [sumador_default]
+Compiling architecture behavioral of entity nPC [npc_default]
+Compiling architecture behavioral of entity memoriaInstrucciones [memoriainstrucciones_default]
+Compiling architecture behavioral of entity UC [uc_default]
+Compiling architecture behavioral of entity Rf [rf_default]
+Compiling architecture arq_mux of entity muxx [muxx_default]
+Compiling architecture arq_seu of entity seu [seu_default]
+Compiling architecture behavioral of entity Alu [alu_default]
+Compiling architecture behavioral of entity PSR_Modifier [psr_modifier_default]
+Compiling architecture behavioral of entity PSR [psr_default]
+Compiling architecture behavioral of entity procesador
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 27 VHDL Units
+Built simulation executable D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/PROCESADOR_isim_beh.exe
+Fuse Memory Usage: 37524 KB
+Fuse CPU Usage: 1296 ms

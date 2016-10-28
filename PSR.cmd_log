@@ -1,0 +1,2 @@
+vhdtdtfi -prj procesador3Angelica -o D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/PSR.vhi -module PSR -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Psr.vhd 
+vhdtdtfi -prj procesador3Angelica -o D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/PSR.vhi -module PSR -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Psr.vhd 

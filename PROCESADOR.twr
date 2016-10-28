@@ -1,0 +1,380 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml PROCESADOR.twx PROCESADOR.ncd -o PROCESADOR.twr
+PROCESADOR.pcf
+
+Design file:              PROCESADOR.ncd
+Physical constraint file: PROCESADOR.pcf
+Device,package,speed:     xc3s500e,fg320,-5 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock clk to Pad
+---------------------+------------+------------------+--------+
+                     | clk (edge) |                  | Clock  |
+Destination          |   to PAD   |Internal Clock(s) | Phase  |
+---------------------+------------+------------------+--------+
+salida_procesador<0> |   17.324(R)|clk_BUFGP         |   0.000|
+salida_procesador<1> |   17.598(R)|clk_BUFGP         |   0.000|
+salida_procesador<2> |   16.853(R)|clk_BUFGP         |   0.000|
+salida_procesador<3> |   17.915(R)|clk_BUFGP         |   0.000|
+salida_procesador<4> |   17.595(R)|clk_BUFGP         |   0.000|
+salida_procesador<5> |   18.166(R)|clk_BUFGP         |   0.000|
+salida_procesador<6> |   18.368(R)|clk_BUFGP         |   0.000|
+salida_procesador<7> |   17.961(R)|clk_BUFGP         |   0.000|
+salida_procesador<8> |   18.291(R)|clk_BUFGP         |   0.000|
+salida_procesador<9> |   18.917(R)|clk_BUFGP         |   0.000|
+salida_procesador<10>|   18.102(R)|clk_BUFGP         |   0.000|
+salida_procesador<11>|   18.777(R)|clk_BUFGP         |   0.000|
+salida_procesador<12>|   19.154(R)|clk_BUFGP         |   0.000|
+salida_procesador<13>|   18.650(R)|clk_BUFGP         |   0.000|
+salida_procesador<14>|   19.138(R)|clk_BUFGP         |   0.000|
+salida_procesador<15>|   19.552(R)|clk_BUFGP         |   0.000|
+salida_procesador<16>|   18.174(R)|clk_BUFGP         |   0.000|
+salida_procesador<17>|   18.694(R)|clk_BUFGP         |   0.000|
+salida_procesador<18>|   19.362(R)|clk_BUFGP         |   0.000|
+salida_procesador<19>|   19.813(R)|clk_BUFGP         |   0.000|
+salida_procesador<20>|   18.994(R)|clk_BUFGP         |   0.000|
+salida_procesador<21>|   19.337(R)|clk_BUFGP         |   0.000|
+salida_procesador<22>|   19.719(R)|clk_BUFGP         |   0.000|
+salida_procesador<23>|   19.431(R)|clk_BUFGP         |   0.000|
+salida_procesador<24>|   19.165(R)|clk_BUFGP         |   0.000|
+salida_procesador<25>|   19.600(R)|clk_BUFGP         |   0.000|
+salida_procesador<26>|   19.520(R)|clk_BUFGP         |   0.000|
+salida_procesador<27>|   19.874(R)|clk_BUFGP         |   0.000|
+salida_procesador<28>|   19.305(R)|clk_BUFGP         |   0.000|
+salida_procesador<29>|   19.496(R)|clk_BUFGP         |   0.000|
+salida_procesador<30>|   19.692(R)|clk_BUFGP         |   0.000|
+salida_procesador<31>|   19.850(R)|clk_BUFGP         |   0.000|
+---------------------+------------+------------------+--------+
+
+Clock rst to Pad
+---------------------+------------+----------------------------+--------+
+                     | clk (edge) |                            | Clock  |
+Destination          |   to PAD   |Internal Clock(s)           | Phase  |
+---------------------+------------+----------------------------+--------+
+salida_procesador<0> |   21.024(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   21.801(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   21.584(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   21.705(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   21.564(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   20.854(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   17.719(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<1> |   21.176(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   21.953(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   21.789(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   21.857(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   21.716(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   21.006(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   18.496(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<2> |   20.553(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   21.333(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   21.113(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   21.234(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   21.184(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   20.383(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   18.090(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<3> |   21.615(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   22.395(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   22.175(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   22.296(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   22.155(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   21.445(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   19.152(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<4> |   21.295(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   22.075(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   21.855(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   21.976(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   21.835(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   21.125(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   19.009(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<5> |   21.866(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   22.646(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   22.426(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   22.547(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   22.406(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   21.696(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   19.580(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<6> |   22.101(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   22.883(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   22.666(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   22.785(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   22.646(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   21.935(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   19.782(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<7> |   21.508(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   22.290(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   22.073(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   22.192(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   22.053(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   21.342(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   19.189(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<8> |   21.384(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   22.166(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   21.949(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   22.068(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   21.929(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   21.218(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   19.065(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<9> |   22.010(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   22.792(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   22.575(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   22.694(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   22.555(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   21.844(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   19.691(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<10>|   21.195(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   21.977(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   21.760(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   21.879(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   21.740(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   21.029(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   18.876(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<11>|   21.870(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   22.652(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   22.435(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   22.554(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   22.415(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   21.704(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   19.551(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<12>|   22.247(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   23.029(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   22.812(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   22.931(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   22.792(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   22.081(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   19.928(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<13>|   21.743(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   22.525(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   22.308(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   22.427(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   22.288(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   21.577(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   19.424(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<14>|   22.231(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   23.013(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   22.796(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   22.915(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   22.776(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   22.065(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   19.912(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<15>|   22.645(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   23.427(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   23.210(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   23.329(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   23.190(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   22.479(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   20.326(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<16>|   21.267(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   22.049(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   21.832(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   21.951(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   21.812(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   21.101(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   18.948(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<17>|   21.787(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   22.569(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   22.352(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   22.471(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   22.332(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   21.621(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   19.468(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<18>|   22.455(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   23.237(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   23.020(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   23.139(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   23.000(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   22.289(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   20.136(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<19>|   22.906(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   23.688(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   23.471(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   23.590(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   23.451(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   22.740(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   20.587(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<20>|   22.087(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   22.869(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   22.652(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   22.771(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   22.632(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   21.921(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   19.768(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<21>|   22.430(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   23.212(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   22.995(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   23.114(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   22.975(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   22.264(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   20.111(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<22>|   22.812(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   23.594(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   23.377(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   23.496(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   23.357(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   22.646(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   20.493(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<23>|   22.524(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   23.306(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   23.089(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   23.208(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   23.069(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   22.358(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   20.205(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<24>|   22.258(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   23.040(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   22.823(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   22.942(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   22.803(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   22.092(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   19.939(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<25>|   22.693(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   23.475(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   23.258(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   23.377(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   23.238(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   22.527(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   20.374(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<26>|   22.613(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   23.395(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   23.178(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   23.297(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   23.158(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   22.447(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   20.294(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<27>|   22.967(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   23.749(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   23.532(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   23.651(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   23.512(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   22.801(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   20.648(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<28>|   22.398(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   23.180(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   22.963(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   23.082(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   22.943(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   22.232(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   20.079(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<29>|   22.589(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   23.371(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   23.154(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   23.273(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   23.134(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   22.423(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   20.270(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<30>|   22.785(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   23.567(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   23.350(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   23.469(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   23.330(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   22.619(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   20.466(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+salida_procesador<31>|   22.943(F)|Inst_Rf/reg_0_cmp_eq0000    |   0.000|
+                     |   23.725(F)|Inst_Rf/reg_16_cmp_eq0000   |   0.000|
+                     |   23.508(F)|Inst_Rf/reg_17_cmp_eq0000   |   0.000|
+                     |   23.627(F)|Inst_Rf/reg_24_cmp_eq0000   |   0.000|
+                     |   23.488(F)|Inst_Rf/reg_25_cmp_eq0000   |   0.000|
+                     |   22.777(F)|Inst_Rf/reg_8_cmp_eq0000    |   0.000|
+                     |   20.624(F)|Inst_UC/salida_UC_cmp_eq0000|   0.000|
+---------------------+------------+----------------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.759|         |         |         |
+rst            |    1.585|    1.585|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rst
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |   14.576|         |
+rst            |         |         |    8.113|   10.349|
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------------+---------+
+Source Pad     |Destination Pad      |  Delay  |
+---------------+---------------------+---------+
+rst            |salida_procesador<0> |   16.566|
+rst            |salida_procesador<1> |   17.108|
+rst            |salida_procesador<2> |   16.290|
+rst            |salida_procesador<3> |   17.408|
+rst            |salida_procesador<4> |   16.991|
+rst            |salida_procesador<5> |   17.562|
+rst            |salida_procesador<6> |   17.764|
+rst            |salida_procesador<7> |   17.471|
+rst            |salida_procesador<8> |   17.801|
+rst            |salida_procesador<9> |   18.427|
+rst            |salida_procesador<10>|   17.612|
+rst            |salida_procesador<11>|   18.287|
+rst            |salida_procesador<12>|   18.664|
+rst            |salida_procesador<13>|   18.160|
+rst            |salida_procesador<14>|   18.648|
+rst            |salida_procesador<15>|   19.062|
+rst            |salida_procesador<16>|   17.684|
+rst            |salida_procesador<17>|   18.204|
+rst            |salida_procesador<18>|   18.872|
+rst            |salida_procesador<19>|   19.323|
+rst            |salida_procesador<20>|   18.504|
+rst            |salida_procesador<21>|   18.847|
+rst            |salida_procesador<22>|   19.229|
+rst            |salida_procesador<23>|   18.941|
+rst            |salida_procesador<24>|   18.675|
+rst            |salida_procesador<25>|   19.110|
+rst            |salida_procesador<26>|   19.030|
+rst            |salida_procesador<27>|   19.384|
+rst            |salida_procesador<28>|   18.815|
+rst            |salida_procesador<29>|   19.006|
+rst            |salida_procesador<30>|   19.202|
+rst            |salida_procesador<31>|   19.360|
+---------------+---------------------+---------+
+
+
+Analysis completed Thu Oct 27 18:47:49 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 198 MB
+
+
+
