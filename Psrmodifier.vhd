@@ -1,59 +1,78 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.all;
+use IEEE.std_logic_unsigned.all;
+use std.textio.all;
+
+-- SUBcc: 001000
+-- SUBxcc: 001010
+-- ANDcc : 001011
+-- ANDNcc : 001100
+-- ORcc : 001101
+-- ORNcc : 001110
+-- XORcc : 001111
+-- XNORcc : 010000
+-- ADDxcc : 010010
+-- ADDcc : 010011
 
 entity PSRModifier is
-    Port ( ALUop : in  STD_LOGIC_VECTOR (5 downto 0);
-           ALUResult : in  STD_LOGIC_VECTOR (31 downto 0);
-			  reset : in STD_LOGIC;
-           op1 : in  STD_LOGIC;
-           op2 : in  STD_LOGIC;
-           nzvc : out  STD_LOGIC_VECTOR (3 downto 0));
+    Port ( ALUOP : in  STD_LOGIC_VECTOR (5 downto 0);
+           ALU_Result : in  STD_LOGIC_VECTOR (31 downto 0);
+           Crs1 : in  STD_LOGIC_VECTOR (31 downto 0);
+           Crs2 : in  STD_LOGIC_VECTOR (31 downto 0);
+           nzvc : out  STD_LOGIC_VECTOR (3 downto 0);
+			  reset: in STD_LOGIC
+			  );
 end PSRModifier;
 
 architecture Behavioral of PSRModifier is
 
+
+
 begin
-process(ALUResult,op1,op2,ALUop)--reset)
-begin
-	--if (reset='1') then
-		--nzvc <= "0000";
-	--else
-		if(ALUop="001000" or ALUop="001001") then --Addcc Addxcc
-			nzvc(0) <= (op1 and op2) or ((not ALUResult(31)) and (op1 or op2));
-			nzvc(1) <= (op1 and op2) and ((not ALUResult(31)) or ((op1) and (not op2) and ALUResult(31)));
-			if(ALUResult = X"00000000") then
-				nzvc(2) <= '1';
-			else
-				nzvc(2) <= '0';
-			end if;
-				nzvc(3)<= ALUResult(31);
+
+	process(ALUOP, ALU_Result, Crs1, Crs2,reset)
+	begin
+		if (reset = '1') then
+			nzvc <= (others=>'0');
 		else
-			if(ALUop = "001010" or ALUop="001011")then--subcc subxcc
-				nzvc(0) <= ((not op1) and op2) or (ALUResult(31) and ((not op1) or op2));
-				nzvc(1) <= ((op1 and (not op2) and (not ALUResult(31))) or ((not op1) and op2 and ALUResult(31)));
-				if(ALUResult = X"00000000")then
+			-- ANDcc or ANDNcc or ORcc or ORNcc or XORcc or XNORcc
+			if (ALUOP="001011" OR ALUOP="001100" OR ALUOP="001101" OR ALUOP="001110" OR ALUOP="001111" OR ALUOP="010000") then
+				nzvc(3) <= ALU_result(31);--el signo que traiga
+				if (conv_integer(ALU_result)=0) then
+					nzvc(2) <= '1';--porque el resultado da cero
+				else
+					nzvc(2) <= '0';
+				end if;
+				nzvc(1) <= '0';--los operadores logicos no generan overflow ni carry
+				nzvc(0) <= '0';
+			end if;
+			
+			-- ADDcc or ADDxcc
+			if (ALUOP="010011" or ALUOP="010010") then
+				nzvc(3) <= ALU_result(31);
+				if (conv_integer(ALU_result)=0) then
 					nzvc(2) <= '1';
 				else
 					nzvc(2) <= '0';
 				end if;
-				nzvc(3) <= ALUResult(31);
-			else
-				if(ALUop = "001100" or ALUop = "001101" or ALUop = "001110" or ALUop = "001111" or ALUop = "010000" or ALUop = "010001")then
-					nzvc(0) <= '0';
-					nzvc(1) <= '0';
-					if(ALUResult = X"00000000")then
+				nzvc(1) <= (Crs1(31) and Crs2(31) and (not ALU_result(31))) or ((not Crs1(31)) and (not Crs2(31)) and ALU_result(31));
+				nzvc(0) <= (Crs1(31) and Crs2(31)) or ((not ALU_result(31)) and (Crs1(31) or Crs2(31)) );
+			end if;
+			
+			--SUBcc or SUBxcc
+			if (ALUOP="001000" or ALUOP="001010") then
+				nzvc(3) <= ALU_result(31);
+				if (conv_integer(ALU_result)=0) then
 					nzvc(2) <= '1';
-					else
-						nzvc(2) <= '0';
-					end if;
-					nzvc(3) <= ALUResult(31);
 				else
-					
-					nzvc <= "1000";
+					nzvc(2) <= '0';
 				end if;
+				nzvc(1) <= (Crs1(31) and (not Crs2(31)) and (not ALU_result(31))) or ((not Crs1(31)) and Crs2(31) and ALU_result(31));
+				nzvc(0) <= ((not Crs1(31)) and Crs2(31)) or (ALU_result(31) and ((not Crs1(31)) or Crs2(31)));
 			end if;
-			end if;
+		end if;
 		
 	end process;
+	
 end Behavioral;
-

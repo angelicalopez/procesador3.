@@ -119,28 +119,18 @@ COMPONENT seu
 		ALUop : IN std_logic_vector(5 downto 0);
 		ALUResult : IN std_logic_vector(31 downto 0);
 		reset : IN std_logic;
-		op1 : IN std_logic;
-		op2 : IN std_logic;          
+		crs1 : IN std_logic_vector(31 downto 0);
+		crs2 : IN std_logic_vector(31 downto 0);
 		nzvc : OUT std_logic_vector(3 downto 0)
 		);
 	END COMPONENT;
 
 
-	COMPONENT PSR
-	PORT(
-		clk : IN std_logic;
-		ncwp : IN std_logic_vector(1 downto 0);
-		reset : IN std_logic;
-		nzvc : IN std_logic_vector(3 downto 0);          
-		carry : OUT std_logic;
-		icc : OUT std_logic_vector(3 downto 0);
-		cwp : OUT std_logic_vector(1 downto 0)
-		);
-	END COMPONENT;
+	
 
 
 
-	COMPONENT PSR
+	COMPONENT PSR 
 	PORT(
 		nzvc : IN std_logic_vector(3 downto 0);
 		reset : IN std_logic;
@@ -228,9 +218,9 @@ Inst_Rf: Rf PORT MAP(
 Inst_PSRModifier: PSRModifier PORT MAP(
 		ALUop =>ucToalu ,
 		ALUResult =>aluTorf ,
-		reset =>reset,
-		op1 =>rfToalu1 ,
-		op2 => muxToalu,
+		reset =>rst,
+		crs1 =>rfToalu1 ,
+		crs2 => muxToalu,
 		nzvc =>psrTopsr
 	);
 

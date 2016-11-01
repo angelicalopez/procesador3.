@@ -1,0 +1,55 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/sumador.vhd" in Library work.
+Architecture behavioral of Entity sumador is up to date.
+Compiling vhdl file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/nPC.vhd" in Library work.
+Architecture behavioral of Entity npc is up to date.
+Compiling vhdl file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/Im.vhd" in Library work.
+Architecture behavioral of Entity memoriainstrucciones is up to date.
+Compiling vhdl file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/Uc.vhd" in Library work.
+Architecture behavioral of Entity uc is up to date.
+Compiling vhdl file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/Rf.vhd" in Library work.
+Architecture behavioral of Entity rf is up to date.
+Compiling vhdl file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/MultiPlexo.vhd" in Library work.
+Architecture arq_mux of Entity muxx is up to date.
+Compiling vhdl file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/Ude.vhd" in Library work.
+Architecture arq_seu of Entity seu is up to date.
+Compiling vhdl file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/Alu.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/Psrmodifier.vhd" in Library work.
+Architecture behavioral of Entity psrmodifier is up to date.
+Compiling vhdl file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/Psr.vhd" in Library work.
+Architecture behavioral of Entity psr is up to date.
+Compiling vhdl file "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/PROCESADOR.vhd" in Library work.
+Entity <procesador> compiled.
+Entity <procesador> (Architecture <behavioral>) compiled.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.43 secs
+ 
+--> 
+
+Total memory usage is 269488 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

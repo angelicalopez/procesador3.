@@ -1,2 +1,7 @@
 vhdtdtfi -prj procesador3Angelica -o D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/PSR.vhi -module PSR -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Psr.vhd 
 vhdtdtfi -prj procesador3Angelica -o D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/PSR.vhi -module PSR -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Psr.vhd 
+xst -intstyle ise -ifn "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/PSR.xst" -ofn "D:/Users/angelicabibiana/Desktop/procesador3angelica/procesador3Angelica/PSR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 PSR.ngc PSR.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o PSR_map.ncd PSR.ngd PSR.pcf 
+par -w -intstyle ise -ol high -t 1 PSR_map.ncd PSR.ncd PSR.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml PSR.twx PSR.ncd -o PSR.twr PSR.pcf 
